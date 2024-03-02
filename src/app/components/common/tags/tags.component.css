@@ -1,0 +1,17 @@
+div.tagContainer{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: .5rem;
+}
+
+div a {
+    border-radius: 5rem;
+    border: none;
+    background-color: #f1f1f1;
+    outline: none;
+    margin: .2rem .15rem;
+    padding: .3rem 1rem;
+    color: #e72929;
+    font-weight: bold;
+}
