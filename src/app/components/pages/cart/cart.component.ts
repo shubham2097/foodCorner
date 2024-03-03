@@ -11,25 +11,19 @@ import { cartItem } from 'src/app/shared/model/CartItem';
 export class CartComponent {
   cart !: Cart;
   constructor(private cartService : CartService) {
-    this.setCart();
+    this.cartService.getCartObservable().subscribe((cart)=>{
+      this.cart = cart;
+    })
    }
 
-  ngOnInit(): void {
-    
-  }
-
-  setCart(){
-    this.cart = this.cartService.getCart()
-  }
+  ngOnInit(): void {  }
 
   removeFromCart(cartItem: cartItem){
     this.cartService.removeFromCart(cartItem.food.id);
-    this.setCart();
   }
 
   changeQuantity(cartItem:cartItem,quantityInString:string){
     const quantity = parseInt(quantityInString);
     this.cartService.changeQuantity(cartItem.food.id, quantity);
-    this.setCart();
   }
 }

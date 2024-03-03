@@ -1,3 +1,4 @@
+<app-cart-title title="Cart Page" margin="1.5rem 0 0 2.5rem"></app-cart-title>
 <app-not-found [visible]="!cart || cart.items.length <=0" notFoundMessage="Items not found" resetLinkText="Go To Home">
 
 </app-not-found> 
@@ -33,7 +34,7 @@
 
     <div class="checkout">
         <div class="foods-count">
-            {{cart.items.length}}
+            {{cart.totalCount}}
         </div>
         <div class="total-price">
             {{cart.totalPrice | currency}}
