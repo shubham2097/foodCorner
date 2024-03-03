@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { FoodService } from 'src/app/services/food.service';
 import { Tag } from 'src/app/shared/model/Tag';
 
@@ -15,6 +16,6 @@ export class TagsComponent implements OnInit{
 
   ngOnInit(): void {
     if(!this.foodPagetags)
-    this.tags = this.foodService.getAllTags();
+    this.foodService.getAllTags().subscribe(tags=>{this.tags = tags});
   }
 }

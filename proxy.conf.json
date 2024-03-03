@@ -1,0 +1,10 @@
+{
+  "/api/foods": {
+    "target": "http://localhost:5000",
+    "secure": false
+  },
+  "/api/food": {
+    "target": "http://localhost:5000",
+    "secure": false
+  }
+}

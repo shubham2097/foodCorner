@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/common/header/header.component';
@@ -24,15 +24,16 @@ import { CartTitleComponent } from './components/pages/cart-title/cart-title.com
     NotFoundComponent,
     SearchComponent,
     TagsComponent,
-    CartTitleComponent
+    CartTitleComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RatingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
